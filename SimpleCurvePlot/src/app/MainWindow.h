@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <memory>
+#include <QTextEdit>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,6 +18,9 @@ public:
     ~MainWindow();
 
 private:
+    void createLogWdget();
+    void initTabWidget();
     Ui::MainWindow *ui;
+    QTextEdit editLog_;
 };
 #endif // MAINWINDOW_H
